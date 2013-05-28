@@ -61,4 +61,5 @@ Todo
 2. Add other encoders (php array, csv etc)
 3. Add more documentation
 4. Investigate if traits would be better suited for parts
+5. Investigate making this framework agnostic (unlikely, but worth thinking about at least)
 
