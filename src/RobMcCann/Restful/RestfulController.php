@@ -1,5 +1,7 @@
 <?php
 
+namespace RobMcCann\Restful;
+
 use Controller;
 use Request;
 use Input;
