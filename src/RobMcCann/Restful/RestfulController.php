@@ -1,7 +1,5 @@
 <?php
 
-namespace RobMcCann\Restful;
-
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
