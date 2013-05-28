@@ -133,7 +133,13 @@ class RestfulController extends Controller {
      * @return string
      */
     public function getFormatFromExtension() {
-        return false;
+        $parts = explode('.', Request::path());
+
+        if (count($parts) === 1) {
+            return false;
+        }
+
+        return end($parts);
     }
 
     /**
