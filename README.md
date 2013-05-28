@@ -41,9 +41,10 @@ use RobMcCann\Restful\RestfulController as Controller;
 class PostController extends Controller {
     public function index() {
         return array(
-          array(
-            'id' => 1,
-            'title' => 'Released a RESTful controller',
+            array(
+                'id' => 1,
+                'title' => 'Released a RESTful controller',
+            ),
         );
     }
 }
