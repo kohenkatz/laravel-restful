@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-0": {
-            "RobMcCann": "src/"
+           "RobMcCann\\Restful": "src/RobMcCann/Restful"
         }
     }
 }
