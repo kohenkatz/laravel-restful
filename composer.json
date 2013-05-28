@@ -12,4 +12,7 @@
             "homepage": "http://robmccann.co.uk"
         }
     ],
+    "require": {
+        "symfony/serializer": "2.4.*@dev"
+    },
 }
