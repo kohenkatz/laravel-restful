@@ -1,6 +1,6 @@
 {
     "name": "rob-mccann/laravel-restful",
-    "description": "Extends laravel resource routing to provide formatting to xml, json and csv.",
+    "description": "Create your own REST API in Laravel. Supports both JSON and XML output.",
     "version": "0.1.0",
     "keywords": ["laravel", "rest", "restful", "routing", "controller"],
     "homepage": "https://github.com/rob-mccann/laravel-restful",
