@@ -1,7 +1,6 @@
 {
     "name": "kohenkatz/laravel-restful",
     "description": "Create your own REST API in Laravel. Supports JSON, JSONP, and XML output.",
-    "version": "0.1.0",
     "keywords": ["laravel", "rest", "restful", "routing", "controller"],
     "homepage": "https://github.com/kohenkatz/laravel-restful",
     "license": "MIT",
