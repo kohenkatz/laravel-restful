@@ -11,9 +11,9 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addResourceIndex($name, $base, $controller)
+	protected function addResourceIndex($name, $base, $controller, $options)
 	{
-		$action = $this->getResourceAction($name, $controller, 'index');
+		$action = $this->getResourceAction($name, $controller, 'index', $options);
 
 		return $this->get($this->getResourceUri($name).'.{format?}', $action);
 	}
@@ -26,9 +26,9 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addResourceCreate($name, $base, $controller)
+	protected function addResourceCreate($name, $base, $controller, $options)
 	{
-		$action = $this->getResourceAction($name, $controller, 'create');
+		$action = $this->getResourceAction($name, $controller, 'create', $options);
 
 		return $this->get($this->getResourceUri($name).'/create.{format?}', $action);
 	}
@@ -41,9 +41,9 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addResourceStore($name, $base, $controller)
+	protected function addResourceStore($name, $base, $controller, $options)
 	{
-		$action = $this->getResourceAction($name, $controller, 'store');
+		$action = $this->getResourceAction($name, $controller, 'store', $options);
 
 		return $this->post($this->getResourceUri($name).'.{format?}', $action);
 	}
@@ -56,11 +56,11 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addResourceShow($name, $base, $controller)
+	protected function addResourceShow($name, $base, $controller, $options)
 	{
 		$uri = $this->getResourceUri($name).'/{'.$base.'}.{format?}';
 
-		return $this->get($uri, $this->getResourceAction($name, $controller, 'show'));
+		return $this->get($uri, $this->getResourceAction($name, $controller, 'show', $options));
 	}
 
 	/**
@@ -71,11 +71,11 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addResourceEdit($name, $base, $controller)
+	protected function addResourceEdit($name, $base, $controller, $options)
 	{
 		$uri = $this->getResourceUri($name).'/{'.$base.'}/edit.{format?}';
 
-		return $this->get($uri, $this->getResourceAction($name, $controller, 'edit'));
+		return $this->get($uri, $this->getResourceAction($name, $controller, 'edit', $options));
 	}
 
 	/**
@@ -86,9 +86,9 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addResourceUpdate($name, $base, $controller)
+	protected function addResourceUpdate($name, $base, $controller, $options)
 	{
-		$this->addPutResourceUpdate($name, $base, $controller);
+		$this->addPutResourceUpdate($name, $base, $controller, $options);
 
 		return $this->addPatchResourceUpdate($name, $base, $controller);
 	}
@@ -101,11 +101,11 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addPutResourceUpdate($name, $base, $controller)
+	protected function addPutResourceUpdate($name, $base, $controller, $options)
 	{
 		$uri = $this->getResourceUri($name).'/{'.$base.'}.{format?}';
 
-		return $this->put($uri, $this->getResourceAction($name, $controller, 'update'));
+		return $this->put($uri, $this->getResourceAction($name, $controller, 'update', $options));
 	}
 
 	/**
@@ -131,10 +131,10 @@ class Router extends LaravelRouter {
 	 * @param  string  $controller
 	 * @return void
 	 */
-	protected function addResourceDestroy($name, $base, $controller)
+	protected function addResourceDestroy($name, $base, $controller, $options)
 	{
 		$uri = $this->getResourceUri($name).'/{'.$base.'}.{format?}';
 
-		return $this->delete($uri, $this->getResourceAction($name, $controller, 'destroy'));
+		return $this->delete($uri, $this->getResourceAction($name, $controller, 'destroy', $options));
 	}
 }
