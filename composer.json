@@ -1,23 +1,22 @@
 {
-    "name": "rob-mccann/laravel-restful",
-    "description": "Create your own REST API in Laravel. Supports both JSON and XML output.",
+    "name": "kohenkatz/laravel-restful",
+    "description": "Create your own REST API in Laravel. Supports JSON, JSONP, and XML output.",
     "version": "0.1.0",
     "keywords": ["laravel", "rest", "restful", "routing", "controller"],
-    "homepage": "https://github.com/rob-mccann/laravel-restful",
+    "homepage": "https://github.com/kohenkatz/laravel-restful",
     "license": "MIT",
     "authors": [
         {
-            "name": "Rob McCann",
-            "email": "rob@robmccann.co.uk",
-            "homepage": "http://robmccann.co.uk"
+            "name": "Moshe Katz",
+            "homepage": "http://moshe.ymkatz.net"
         }
     ],
     "require": {
-        "symfony/serializer": "2.4.*@dev"
+        "laravel/framework": "4.2.*"
     },
     "autoload": {
         "psr-0": {
-           "RobMcCann\\Restful": "src"
+           "Kohenkatz\\Restful": "src"
         }
     }
 }

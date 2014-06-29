@@ -1,6 +1,4 @@
-<?php
-
-namespace RobMcCann\Restful;
+<?php namespace Kohenkatz\Restful;
 
 use Illuminate\Routing\RoutingServiceProvider as LaravelRoutingServiceProvider;
 
