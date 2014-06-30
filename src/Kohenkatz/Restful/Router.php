@@ -9,7 +9,8 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
-	 * @return void
+	 * @param  array   $options
+	 * @return Route
 	 */
 	protected function addResourceIndex($name, $base, $controller, $options)
 	{
@@ -24,7 +25,8 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
-	 * @return void
+	 * @param  array   $options
+	 * @return Route
 	 */
 	protected function addResourceCreate($name, $base, $controller, $options)
 	{
@@ -39,7 +41,8 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
-	 * @return void
+	 * @param  array   $options
+	 * @return Route
 	 */
 	protected function addResourceStore($name, $base, $controller, $options)
 	{
@@ -54,7 +57,8 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
-	 * @return void
+	 * @param  array   $options
+	 * @return Route
 	 */
 	protected function addResourceShow($name, $base, $controller, $options)
 	{
@@ -69,7 +73,8 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
-	 * @return void
+	 * @param  array   $options
+	 * @return Route
 	 */
 	protected function addResourceEdit($name, $base, $controller, $options)
 	{
@@ -84,6 +89,7 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
+	 * @param  array   $options
 	 * @return void
 	 */
 	protected function addResourceUpdate($name, $base, $controller, $options)
@@ -99,7 +105,8 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
-	 * @return void
+	 * @param  array   $options
+	 * @return Route
 	 */
 	protected function addPutResourceUpdate($name, $base, $controller, $options)
 	{
@@ -129,7 +136,8 @@ class Router extends LaravelRouter {
 	 * @param  string  $name
 	 * @param  string  $base
 	 * @param  string  $controller
-	 * @return void
+	 * @param  array   $options
+	 * @return Route
 	 */
 	protected function addResourceDestroy($name, $base, $controller, $options)
 	{
