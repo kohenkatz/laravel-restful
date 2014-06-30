@@ -141,8 +141,8 @@ class Router extends LaravelRouter {
 	 */
 	protected function addResourceDestroy($name, $base, $controller, $options)
 	{
-		$uri = $this->getResourceUri($name).'/{'.$base.'}.{format?}';
+		$action = $this->getResourceAction($name, $controller, 'destroy', $options);
 
-		return $this->delete($uri, $this->getResourceAction($name, $controller, 'destroy', $options));
+		return $this->delete($this->getResourceUri($name).'/{'.$base.'}.{format?}', $action);
 	}
 }
