@@ -36,6 +36,12 @@ class RestfulController extends Controller {
 
 			$response->setContent($content);
 			$response->headers->set('Content-Type', Request::getMimeType($format));
+			
+			if (isset($this->statusCode)) {
+				$response->setStatusCode($this->statusCode);
+			} elseif (is_array($response->original['_meta']) && is_numeric($response->original['_meta']['status'])) {
+				$response->setStatusCode($response->original['_meta']['status']);
+			}
 		}
 	}
 
